@@ -88,8 +88,6 @@ five categories of realistic noise (Precision 0.985, Recall 0.915
 on time-based holdout), backend deployed to Railway, frontend
 deployed to Vercel. Next: panel pitch on May 15.
 
-# FHH AI Optimizer
-
 An end-to-end AI platform for industrial operations, built for four manufacturing
 lines across the UAE, Egypt and Jordan.
 
