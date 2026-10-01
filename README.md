@@ -87,3 +87,38 @@ Phase 2 complete: 24/24 contract endpoints live, model evaluated under
 five categories of realistic noise (Precision 0.985, Recall 0.915
 on time-based holdout), backend deployed to Railway, frontend
 deployed to Vercel. Next: panel pitch on May 15.
+
+# FHH AI Optimizer
+
+An end-to-end AI platform for industrial operations, built for four manufacturing
+lines across the UAE, Egypt and Jordan.
+
+## What it does
+
+- **Predictive maintenance** — flags likely equipment failures before they interrupt
+  a production line
+- **Demand forecasting** — projects production demand from historical operating data
+- **Decision-support assistant** — a grounded LLM interface that answers operational
+  questions against the platform's own data rather than generating free text
+
+## Stack
+
+| Layer | Technology |
+| --- | --- |
+| Backend | FastAPI (Python), REST API |
+| Frontend | React |
+| Database | PostgreSQL |
+| Machine learning | scikit-learn, Prophet |
+| Deployment | Railway, Vercel, Git-based CI/CD |
+
+## Architecture
+
+The platform is a FastAPI service over PostgreSQL serving a React front end.
+Forecasting and maintenance models are trained offline and served through the same
+API. The assistant layer sits on top of the API rather than querying the database
+directly, so every answer it gives is backed by a real endpoint response.
+
+## Status
+
+Built April–May 2026 as sole developer, owning the work from data architecture
+through to production deployment, and presented to the client's senior management.
